@@ -9,6 +9,9 @@ A comprehensive Android application that captures camera frames, processes them 
 
 ## 📸 Screenshots
 
+![WhatsApp Image 2025-10-30 at 9 34 17 PM](https://github.com/user-attachments/assets/215209a3-6325-4bf5-b45c-76c94a46651c)
+
+
 ### Android App
 - Real-time camera feed processing
 - OpenGL ES rendering
