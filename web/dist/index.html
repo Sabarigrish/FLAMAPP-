@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Detection Web Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Edge Detection Web Viewer</h1>
+            <p class="subtitle">Real-time OpenCV Processing Viewer</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Canvas for frame display -->
+            <div class="canvas-container">
+                <canvas id="frameCanvas" width="640" height="480"></canvas>
+                <div id="loadingIndicator" style="position: absolute; color: white; font-size: 18px;">Loading...</div>
+            </div>
+
+            <!-- Stats Panel -->
+            <div class="stats-panel">
+                <h2>📊 Frame Statistics</h2>
+                <div id="statsContainer" class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">FPS:</span>
+                        <span class="stat-value">--</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Resolution:</span>
+                        <span class="stat-value">--</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Mode:</span>
+                        <span class="stat-value">--</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Last Update:</span>
+                        <span class="stat-value">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-panel">
+                <h2>🎮 Controls</h2>
+                
+                <div class="control-group">
+                    <label for="modeSelector">Processing Mode:</label>
+                    <select id="modeSelector">
+                        <option value="RAW">Raw</option>
+                        <option value="GRAYSCALE">Grayscale</option>
+                        <option value="EDGE_DETECTION" selected>Edge Detection</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="fileInput">Upload Image:</label>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+
+                <div class="control-group">
+                    <button id="refreshBtn" class="btn btn-primary">
+                        🔄 Refresh Sample
+                    </button>
+                </div>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="info-panel">
+                <h2>ℹ️ Information</h2>
+                <ul>
+                    <li><strong>Purpose:</strong> Display processed frames from Android app</li>
+                    <li><strong>Technology:</strong> TypeScript + HTML5 Canvas</li>
+                    <li><strong>Features:</strong> Real-time stats, multiple modes, file upload</li>
+                    <li><strong>Integration:</strong> Can receive frames via WebSocket or HTTP</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Edge Detection Viewer | Built with TypeScript</p>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
