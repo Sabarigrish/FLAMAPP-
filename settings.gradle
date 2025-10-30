@@ -1,0 +1,5 @@
+rootProject.name = "EdgeDetectionViewer"
+include ':app'
+// OpenCV module - using Maven instead
+// include ':opencv'
+
